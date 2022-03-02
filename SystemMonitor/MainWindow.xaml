@@ -1,0 +1,102 @@
+﻿<Controls:MetroWindow x:Class="SystemMonitor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemMonitor"
+        xmlns:livechart="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="任务管理器"
+        MinHeight="720" MinWidth="1024" d:DesignHeight="1239.786" d:DesignWidth="1718.973">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Gray" BorderThickness="1" Margin="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="35" HorizontalAlignment="Center">CPU</TextBlock>
+                <local:Doughnut Grid.Column="0" Grid.Row="1"></local:Doughnut>
+                <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBlock Name="CPUCountTB" HorizontalAlignment="Right" FontSize="18" Margin="5">CPU数量:</TextBlock>
+                    <TextBlock Name="CPUTypeTB" HorizontalAlignment="Right" FontSize="18" Margin="5">CPU型号:</TextBlock>
+                    <TextBlock Name="CPUFreTB" HorizontalAlignment="Right" FontSize="18" Margin="5">CPU频率:</TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Margin="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="35" HorizontalAlignment="Center">内存</TextBlock>
+                <local:Doughnut Grid.Column="0" Grid.Row="1"></local:Doughnut>
+                <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBlock Name="MemoryTotalTB" HorizontalAlignment="Center" FontSize="18" Margin="5" TextAlignment="Right">内存总量:</TextBlock>
+                    <TextBlock Name="MemoryUsedTB" HorizontalAlignment="Right" FontSize="18" Margin="5" TextAlignment="Right">使用量:</TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Column="0" Grid.Row="1" BorderBrush="Gray" BorderThickness="1" Margin="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="35" HorizontalAlignment="Center">硬盘</TextBlock>
+                <local:Doughnut Grid.Column="0" Grid.Row="1"></local:Doughnut>
+                <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBlock Name="DiskTotalTB" HorizontalAlignment="Right" FontSize="18" Margin="5">硬盘总量:</TextBlock>
+                    <TextBlock Name="DiskUsageTB" HorizontalAlignment="Right" FontSize="18" Margin="5">使用量:</TextBlock>
+                    <TextBlock Name="FileSystemTB" HorizontalAlignment="Right" FontSize="18" Margin="5">文件系统:</TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="1" BorderBrush="Gray" BorderThickness="1" Margin="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="35" HorizontalAlignment="Center">网络</TextBlock>
+                <local:Doughnut Grid.Column="0" Grid.Row="1"></local:Doughnut>
+                <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBlock Name="NetCardTypeTB" HorizontalAlignment="Right" FontSize="18" Margin="5">网卡型号:</TextBlock>
+                    <TextBlock Name="MacTB" HorizontalAlignment="Right" FontSize="18" Margin="5">Mac地址:</TextBlock>
+                    <TextBlock Name="IPTB" HorizontalAlignment="Right" FontSize="18" Margin="5">IP地址:</TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+
+    </Grid>
+</Controls:MetroWindow>
