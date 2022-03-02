@@ -1,16 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.ComponentModel;
 namespace SystemMonitor.Tool
 {
-    public class Memory
+    /// <summary>
+    /// 内存模型类
+    /// </summary>
+    public class Memory:INotifyPropertyChanged
     {
+        /// <summary>
+        /// 内存插槽数
+        /// </summary>
         public int SlotCount { get; set; }
-        public long[] MemorySize { get; set; }
-        public long TotalMemory { get; set; }
-        public long UsedMemory { get; set; }
+
+        /// <summary>
+        /// 各插槽内存大小
+        /// </summary>
+        public ulong[] MemorySize { get; set; }
+
+        /// <summary>
+        /// 内存总量
+        /// </summary>
+        public ulong TotalMemory { get; set; }
+
+        /// <summary>
+        /// 内存已用量
+        /// </summary>
+        private ulong _usedMemory;
+        public ulong UsedMemory
+        {
+            set
+            {
+                _usedMemory = value;
+                if (PropertyChanged != null)//有改变  
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("UsedMemory"));//对Name进行监听  
+                }
+            }
+            get
+            {
+                return _usedMemory;
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

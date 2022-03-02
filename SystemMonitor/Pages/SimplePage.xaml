@@ -1,0 +1,24 @@
+﻿<Page x:Class="SystemMonitor.SimplePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SystemMonitor"
+      mc:Ignorable="d"     
+      Title="SimplePage" >
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <local:CpuSimple MouseEnter="CpuSimple_MouseEnter" MouseLeave="CpuSimple_MouseLeave" x:Name="CpuSimple" MouseDown="CpuSimple_MouseDown" ToolTip="点击察看附加信息" ></local:CpuSimple>
+        <local:MemorySimple MouseEnter="CpuSimple_MouseEnter" MouseLeave="CpuSimple_MouseLeave" x:Name="MemorySimple" ToolTip="点击察看附加信息" Grid.Column="1" MouseDown="CpuSimple_MouseDown"></local:MemorySimple>
+        <local:DiskSimple MouseEnter="CpuSimple_MouseEnter" MouseLeave="CpuSimple_MouseLeave" Grid.Column="0" Grid.Row="1" x:Name="DiskSimple" MouseDown="CpuSimple_MouseDown" ToolTip="点击察看附加信息"></local:DiskSimple>
+        <local:NetSimple MouseEnter="CpuSimple_MouseEnter" MouseLeave="CpuSimple_MouseLeave" Grid.Column="1" Grid.Row="1" x:Name="NetSimple" MouseDown="CpuSimple_MouseDown" ToolTip="点击察看附加信息"></local:NetSimple>
+
+    </Grid>
+</Page>

@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("SystemMonitor")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("bookspirit.me")]
+[assembly: AssemblyCompany("fujitsu.Com")]
 [assembly: AssemblyProduct("SystemMonitor")]
-[assembly: AssemblyCopyright("Copyright © bookspirit.me 2017")]
+[assembly: AssemblyCopyright("Copyright © fujitsu.Com 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
