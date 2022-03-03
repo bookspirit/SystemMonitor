@@ -49,7 +49,7 @@ namespace SystemMonitor
         {
             if(MainWindow.detail == null)
             {
-                MainWindow.detail = new DetailWindow();
+                MainWindow.detail = new DetailPage();
             }
             MainWindow.detail.InitTab((e.Source as Control).Name);
             NavigationService.Navigate(MainWindow.detail);

@@ -11,6 +11,6 @@
         >
     
     <Grid >
-        <Frame x:Name="MainFrame" Source="SimplePage.xaml" NavigationUIVisibility="Hidden"></Frame>
+        <Frame x:Name="MainFrame" Source="Pages/SimplePage.xaml" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

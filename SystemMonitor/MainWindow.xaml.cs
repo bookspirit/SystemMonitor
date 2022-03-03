@@ -8,7 +8,7 @@ namespace SystemMonitor
     public partial class MainWindow : Window
     {
         WatcherThread watcher;
-        public static DetailWindow detail;
+        public static DetailPage detail;
         public MainWindow()
         {
             App.information.InflatInformation();

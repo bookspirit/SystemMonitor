@@ -181,7 +181,7 @@ namespace SystemMonitor
 
         private void Nav_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.Navigate(new Uri("pack://application:,,,/SimplePage.xaml"));
+            NavigationService.Navigate(new Uri("pack://application:,,,/Pages/SimplePage.xaml"));
         }
 
     }
